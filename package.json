@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-pixel-dimensions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tailwind CSS plugin that generates widths and heights in pixels for tricky pixel-perfect layouts.",
   "author": "Rob Sawyer <robksawyer@gmail.com>",
   "license": "ISC",

@@ -1,4 +1,4 @@
-# Font Sizes for Tailwind CSS
+# Pixel Dimensions for Tailwind CSS
 This plugin allows you to quickly generate widths and heights in pixels.
 
 ## Requirements

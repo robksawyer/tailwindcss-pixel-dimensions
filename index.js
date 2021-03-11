@@ -4,8 +4,6 @@
  * @file index.js
  */
 const plugin = require('tailwindcss/plugin')
-const _ = require('lodash')
-// const selectorParser = require('postcss-selector-parser')
 
 /**
  * getSizes
@@ -24,7 +22,6 @@ const getSizes = (totalSizes = 900, startingValue = 0) => {
   )
   // Merge the array of objects into a single one
   const sizeObj = Object.assign.apply(Object, sizes)
-  // console.log('sizeObj', sizeObj)
   return sizeObj
 }
 
@@ -49,6 +46,15 @@ module.exports = plugin.withOptions(
       (options && options.height && options.height.total) || 900,
       (options && options.height && options.height.startingSize) || 0
     )
+    const margins = getSizes(
+      (options && options.margin && options.margin.total) || 900,
+      (options && options.margin && options.margin.startingSize) || 0
+    )
+    const paddings = getSizes(
+      (options && options.padding && options.padding.total) || 900,
+      (options && options.padding && options.padding.startingSize) || 0
+    )
+
     return {
       theme: {
         // fontSizes: {
@@ -59,6 +65,12 @@ module.exports = plugin.withOptions(
           height: {
             ...heights,
           },
+          margin: {
+            ...margins,
+          },
+          padding: {
+            ...paddings,
+          }
         },
       },
       // variants: {
